@@ -1,0 +1,6 @@
+[submodule "IGCompassModel"]
+	path = IGCompassModel
+	url = https://github.com/gt-health/IGCompassModel
+[submodule "IGCompassWebapp"]
+	path = IGCompassWebapp
+	url = https://github.com/gt-health/IGCompassWebapp.git
