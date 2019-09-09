@@ -1,0 +1,32 @@
+# The namespace to deploy your application
+global:
+  namespace: IGCompass
+
+# Default values for webapp.
+
+# Default values for a backend API web service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+# REMOVE THIS SECTION IF YOUR APPLICATION DOES NOT HAVE A BACKEND
+#backend:
+  #name is a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character (e.g. 'my-name',  or 'abc-123')
+  name: IGCompassWebapp
+  port: 8080
+  replicaCount: 1
+  proxy:
+    incomingPath: /IGCompass/
+    containerPath: "" # The empty string "" means use same as incomingPath, otherwise the value in the string will replace the value of incomingPath when traffic is sent to the application in the deployed container
+  image:
+    repository: gt-build.hdap.gatech.edu/IGCompass
+    tag: latest
+    pullPolicy: Always
+  #Volumes used by the application are placed here
+#  volumes:
+#    vol1: /var/lib/mysql
+#    vol2: /something/else/in/container
+  #Environment variables used by the application are placed here.
+  #Define environment variables for your container using the format below.
+#  env:
+#    ENV_1: test_env1
+#    ENV_2: test_env2
+#    ENV_3: test_env3
