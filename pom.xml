@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.gatech</groupId>
+  <artifactId>IGCompass</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>IGCompass</name>
+  <packaging>pom</packaging>
+  <description>An jetty project using jacksosn to read an IGFlatFhir json file and create an internal model, converting it to </description>
+  <properties>
+  	<antlr4.listener>true</antlr4.listener>
+  	<antlr4.visitor>true</antlr4.visitor>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  	<jackson.version>2.10.0.pr2</jackson.version>
+  	<hapifhir.version>3.8.0</hapifhir.version>
+  </properties>
+  
+  <modules>
+  	<module>/IGCompassModel</module>
+  	<module>/IGCompassWebapp</module>
+  </modules>
+</project>
