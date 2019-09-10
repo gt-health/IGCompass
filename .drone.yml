@@ -10,7 +10,7 @@ steps:
 #  commands:
 #  - mvn clean package
 
- Create Docker image from WAR file and push to HDAP Docker registry
+# Create Docker image from WAR file and push to HDAP Docker registry
 - name: deploy_java_server_image
   image: plugins/docker
   settings:
