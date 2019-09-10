@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>IGCompass</name>
   <packaging>pom</packaging>
-  <description>An jetty project using jacksosn to read an IGFlatFhir json file and create an internal model, converting it to </description>
+  <description>An jetty project using jackson to read an IGFlatFhir json file and create an internal model, converting it to </description>
   <properties>
   	<antlr4.listener>true</antlr4.listener>
   	<antlr4.visitor>true</antlr4.visitor>

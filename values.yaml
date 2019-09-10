@@ -1,7 +1,7 @@
 backend: 
   image: 
     pullPolicy: Always
-    repository: gt-build.hdap.gatech.edu/IGCompass
+    repository: gt-build.hdap.gatech.edu/igcompass
     tag: latest
   name: igcompasswebapp
   port: 8080
