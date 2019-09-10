@@ -6,7 +6,7 @@ backend:
   name: igcompasswebapp
   port: 8080
   proxy: 
-    containerPath: ""
+    containerPath: "/"
     incomingPath: /IGCompass/
   replicaCount: 1
 global: 
