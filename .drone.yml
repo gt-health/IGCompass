@@ -41,11 +41,6 @@ steps:
     
  #Run help to build the Kubernetes config file to deploy the application
 - name: deploy_to_k8s
-  image: plugins/docker
-  settings:
-    context: .
-    dockerfile: Dockerfile
-- name: deploy_to_k8s
   image: docker:dind
   volumes:
   - name: dockersock
