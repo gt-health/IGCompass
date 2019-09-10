@@ -1,7 +1,6 @@
 kind: pipeline
 name: default
 
-steps:
 # Define the steps to test, package, and deploy your application
 # For example steps to build and deploy a java application may look like this
 # Run Java Unit Tests and build WAR file
@@ -12,10 +11,10 @@ steps:
 
 #Add submodules to project
 steps:
-  - name: submodules
-    image: alpine:git
-    commands:
-      - git submodule update --recursive --remote
+- name: submodules
+  image: alpine:git
+  commands:
+    - git submodule update --recursive --remote
 # Create Docker image from WAR file and push to HDAP Docker registry
 - name: deploy_java_server_image
   image: plugins/docker
