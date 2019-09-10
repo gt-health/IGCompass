@@ -10,4 +10,4 @@ backend:
     incomingPath: /IGCompass/
   replicaCount: 1
 global: 
-  namespace: IGCompass
+  namespace: igcompass
