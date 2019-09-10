@@ -1,13 +1,9 @@
 FROM maven:3.6.0-jdk-8 AS builder
 WORKDIR /usr/src/
 RUN git clone https://github.com/gt-health/VRDR_javalib.git
-RUN cd VRDR_javalib
-RUN mvn clean install
-RUN cd ..
-RUN mkdir -p IGCompass
-RUN cd IGCompass
-ADD . .
-RUN mvn clean package
+RUN  mvn clean install -DskipTests -f VRDR_javalib
+ADD . ./IGCompass
+RUN mvn clean package -DskipTests -f IGCompass
 
 FROM tomcat:latest
 #move the WAR for contesa to the webapps directory
