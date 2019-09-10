@@ -15,8 +15,8 @@ steps:
   image: plugins/docker
   settings:
     repo: gt-build.hdap.gatech.edu/IGCompass
-    context: igCompass
-    dockerfile: igCompass/IGCompass
+    context: .
+    dockerfile: Dockerfile
     tags:
       - latest
 #
