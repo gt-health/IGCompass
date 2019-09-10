@@ -10,6 +10,12 @@ steps:
 #  commands:
 #  - mvn clean package
 
+#Add submodules to project
+steps:
+  - name: submodules
+    image: alpine:git
+    commands:
+      - git submodule update --recursive --remote
 # Create Docker image from WAR file and push to HDAP Docker registry
 - name: deploy_java_server_image
   image: plugins/docker
